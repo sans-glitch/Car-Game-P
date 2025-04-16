@@ -37,7 +37,7 @@ func _process(delta: float) -> void:
 		fr_wheel.rotation.y = lerp(fr_wheel.rotation.y, 0.0, 0.3)
 
 func _physics_process(delta: float) -> void:
-	#downforce()
+	downforce()
 	pass
 
 func downforce():
