@@ -1,0 +1,246 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dtsqa8a5yjrs8"
+path="res://.godot/imported/scene.gltf-ea3d08f7571d392d0a25082dee2fcc6e.scn"
+
+[deps]
+
+source_file="res://assets/scene.gltf"
+dest_files=["res://.godot/imported/scene.gltf-ea3d08f7571d392d0a25082dee2fcc6e.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"Placeable": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/Placeable.tres"
+}
+},
+"meshes": {
+"Sketchfab_Scene_BridgePillarEnd_2x2_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_BridgePillarEnd_2x2_Placeable_0.res"
+},
+"Sketchfab_Scene_BridgePillarEnd_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_BridgePillarEnd_Placeable_0.res"
+},
+"Sketchfab_Scene_BridgePillarSmall_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_BridgePillarSmall_Placeable_0.res"
+},
+"Sketchfab_Scene_BridgePillarUp_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_BridgePillarUp_Placeable_0.res"
+},
+"Sketchfab_Scene_BridgePillar_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_BridgePillar_Placeable_0.res"
+},
+"Sketchfab_Scene_Road45Bridge_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_Road45Bridge_Placeable_0.res"
+},
+"Sketchfab_Scene_Road45_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_Road45_Placeable_0.res"
+},
+"Sketchfab_Scene_Road90Bridge_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_Road90Bridge_Placeable_0.res"
+},
+"Sketchfab_Scene_Road90_2x2Bridge_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_Road90_2x2Bridge_Placeable_0.res"
+},
+"Sketchfab_Scene_Road90_2x2Up_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_Road90_2x2Up_Placeable_0.res"
+},
+"Sketchfab_Scene_Road90_2x2_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_Road90_2x2_Placeable_0.res"
+},
+"Sketchfab_Scene_Road90_2x2upBridge_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_Road90_2x2upBridge_Placeable_0.res"
+},
+"Sketchfab_Scene_Road90_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_Road90_Placeable_0.res"
+},
+"Sketchfab_Scene_RoadAngleBridge_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_RoadAngleBridge_Placeable_0.res"
+},
+"Sketchfab_Scene_RoadAngle_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_RoadAngle_Placeable_0.res"
+},
+"Sketchfab_Scene_RoadEndBridge_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_RoadEndBridge_Placeable_0.res"
+},
+"Sketchfab_Scene_RoadEnd_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_RoadEnd_Placeable_0.res"
+},
+"Sketchfab_Scene_RoadForwardBridge_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_RoadForwardBridge_Placeable_0.res"
+},
+"Sketchfab_Scene_RoadForwardUp_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_RoadForwardUp_Placeable_0.res"
+},
+"Sketchfab_Scene_RoadForward_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/straight.res"
+},
+"Sketchfab_Scene_RoadTBridge_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_RoadTBridge_Placeable_0.res"
+},
+"Sketchfab_Scene_RoadT_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_RoadT_Placeable_0.res"
+},
+"Sketchfab_Scene_RoadUpBridge_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_RoadUpBridge_Placeable_0.res"
+},
+"Sketchfab_Scene_RoadXBridge_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_RoadXBridge_Placeable_0.res"
+},
+"Sketchfab_Scene_RoadX_Placeable_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/meshes/Sketchfab_Scene_RoadX_Placeable_0.res"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

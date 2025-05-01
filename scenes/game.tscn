@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://ca0xf17k4itl7"]
+[gd_scene load_steps=15 format=3 uid="uid://ca0xf17k4itl7"]
 
 [ext_resource type="PackedScene" uid="uid://c41a7s1qr1opf" path="res://scenes/car.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://bcnvqevk2o0ft" path="res://scripts/game.gd" id="1_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://d3qob1khttvb2" path="res://icon.svg" id="2_lnu2h"]
+[ext_resource type="MeshLibrary" uid="uid://b7bbgjxktv6o2" path="res://assets/road_mesh_lib.tres" id="4_lbhrr"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8cj0n"]
 size = Vector2(20, 20)
@@ -12,10 +13,10 @@ albedo_texture = ExtResource("2_lnu2h")
 
 [sub_resource type="BoxMesh" id="BoxMesh_yqjtg"]
 material = SubResource("StandardMaterial3D_lbhrr")
-size = Vector3(100, 0.1, 100)
+size = Vector3(1000, 0.1, 1000)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_iywne"]
-data = PackedVector3Array(-50, 0.05, 50, 50, 0.05, 50, -50, -0.05, 50, 50, 0.05, 50, 50, -0.05, 50, -50, -0.05, 50, 50, 0.05, -50, -50, 0.05, -50, 50, -0.05, -50, -50, 0.05, -50, -50, -0.05, -50, 50, -0.05, -50, 50, 0.05, 50, 50, 0.05, -50, 50, -0.05, 50, 50, 0.05, -50, 50, -0.05, -50, 50, -0.05, 50, -50, 0.05, -50, -50, 0.05, 50, -50, -0.05, -50, -50, 0.05, 50, -50, -0.05, 50, -50, -0.05, -50, 50, 0.05, 50, -50, 0.05, 50, 50, 0.05, -50, -50, 0.05, 50, -50, 0.05, -50, 50, 0.05, -50, -50, -0.05, 50, 50, -0.05, 50, -50, -0.05, -50, 50, -0.05, 50, 50, -0.05, -50, -50, -0.05, -50)
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_u5sy4"]
+data = PackedVector3Array(-500, 0.05, 500, 500, 0.05, 500, -500, -0.05, 500, 500, 0.05, 500, 500, -0.05, 500, -500, -0.05, 500, 500, 0.05, -500, -500, 0.05, -500, 500, -0.05, -500, -500, 0.05, -500, -500, -0.05, -500, 500, -0.05, -500, 500, 0.05, 500, 500, 0.05, -500, 500, -0.05, 500, 500, 0.05, -500, 500, -0.05, -500, 500, -0.05, 500, -500, 0.05, -500, -500, 0.05, 500, -500, -0.05, -500, -500, 0.05, 500, -500, -0.05, 500, -500, -0.05, -500, 500, 0.05, 500, -500, 0.05, 500, 500, 0.05, -500, -500, 0.05, 500, -500, 0.05, -500, 500, 0.05, -500, -500, -0.05, 500, 500, -0.05, 500, -500, -0.05, -500, 500, -0.05, 500, 500, -0.05, -500, -500, -0.05, -500)
 
 [sub_resource type="Environment" id="Environment_uwrxv"]
 
@@ -50,20 +51,22 @@ mesh = SubResource("BoxMesh_yqjtg")
 [node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_iywne")
+shape = SubResource("ConcavePolygonShape3D_u5sy4")
 
 [node name="Car" parent="." instance=ExtResource("1_uwrxv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 3, 28.5564)
 mass = 1000.0
-suspension_rest_dist = 0.3
+suspension_rest_dist = 0.2
 spring_strength = 30000.0
-spring_damper = 500.0
+spring_damper = 100.0
 wheel_radius = 0.25
 debug = true
-engine_power = 2000.0
-steering_angle = 20.0
+engine_power = 1000.0
 front_tire_grip = 0.5
 rear_tire_grip = 0.2
+min_grip = 0.0
+grip_mult = 50.0
+awd = true
 
 [node name="Camera3D" type="Camera3D" parent="Car"]
 transform = Transform3D(1, -4.37114e-08, -1.36966e-08, 4.47035e-08, 0.866025, 0.5, -9.99407e-09, -0.5, 0.866025, 0, 2.6755, 3)
@@ -106,3 +109,12 @@ mesh = SubResource("PrismMesh_lnu2h")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_p57ef")
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh_library = ExtResource("4_lbhrr")
+cell_size = Vector3(40, 2, 40)
+data = {
+"cells": PackedInt32Array(65535, 0, 1441797, 0, 0, 1441792, 65534, 0, 1441797, 65533, 0, 1441797, 0, 1, 655365, 0, 2, 655365, 0, 3, 655365, 0, 4, 655360, 65535, 4, 1048581, 65534, 4, 1048581, 65533, 4, 1048581, 65532, 4, 1048576, 65532, 3, 5, 65532, 2, 5, 65532, 1, 5, 65532, 0, 0)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)

@@ -13,7 +13,10 @@ var accel_input
 @export var steering_angle : float = 30
 @export var front_tire_grip : float = 2
 @export var rear_tire_grip : float = 2
-
+@export var min_grip : float = 2
+@export var grip_mult : float = 5
+@export var friction_denom : float = 25
+@export var awd = false
 var steering_input
 
 func _process(delta: float) -> void:
@@ -37,7 +40,7 @@ func _process(delta: float) -> void:
 		fr_wheel.rotation.y = lerp(fr_wheel.rotation.y, 0.0, 0.3)
 
 func _physics_process(delta: float) -> void:
-	downforce()
+	#downforce()
 	pass
 
 func downforce():

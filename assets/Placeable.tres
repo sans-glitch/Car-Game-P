@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://2iv2eolvgsaj"]
+
+[ext_resource type="Texture2D" uid="uid://dtqmvlmixlnak" path="res://assets/textures/Placeable_baseColor.png" id="1_kfca2"]
+[ext_resource type="Texture2D" uid="uid://blq7uqven7t55" path="res://assets/textures/Placeable_emissive.png" id="2_n6kja"]
+[ext_resource type="Texture2D" uid="uid://44r8w0i0pbwp" path="res://assets/textures/Placeable_metallicRoughness.png" id="3_q5p8l"]
+
+[resource]
+resource_name = "Placeable"
+cull_mode = 2
+albedo_texture = ExtResource("1_kfca2")
+metallic = 1.0
+metallic_texture = ExtResource("3_q5p8l")
+metallic_texture_channel = 2
+roughness = 0.5
+roughness_texture = ExtResource("3_q5p8l")
+roughness_texture_channel = 1
+emission_enabled = true
+emission_texture = ExtResource("2_n6kja")
+texture_filter = 0

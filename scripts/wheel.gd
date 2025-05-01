@@ -13,13 +13,11 @@ var grip : float
 
 func _ready() -> void:
 	add_exception(car)
-	$WheelMesh/StaticBody3D.add_collision_exception_with(car)
+	#$WheelMesh/StaticBody3D.add_collision_exception_with(car)
 	target_position = Vector3(0, -(car.suspension_rest_dist + car.wheel_radius), 0)
 
 func _physics_process(delta: float) -> void:
-	
-	grip = 0
-	
+	#grip = 0
 	if is_colliding():
 		var collision_point = get_collision_point()
 		suspension(delta, collision_point)
@@ -28,14 +26,14 @@ func _physics_process(delta: float) -> void:
 		
 		#apply_z_force(collision_point)
 		apply_x_force(delta, collision_point)
-		apply_friction(collision_point, (car.mass / 25))
+		apply_friction(collision_point, (car.mass / car.friction_denom))
 		set_wheel_position(to_local(collision_point).y + car.wheel_radius)
 	else:
 		set_wheel_position(-car.suspension_rest_dist)
 		
-	#if Input.is_action_pressed("brake"):
-		#var collision_point = get_collision_point()
-		#apply_friction(collision_point, (car.mass)/25)
+	if Input.is_action_pressed("brake"):
+		var collision_point = get_collision_point()
+		apply_friction(collision_point, (car.mass / car.friction_denom))
 	
 func apply_x_force(delta, collision_point):
 	var dir: Vector3 = global_basis.x
@@ -90,8 +88,8 @@ func get_point_velocity(point: Vector3):
 	
 	
 func acceleration(collision_point):
-	#if is_front_wheel:
-		#return
+	if is_front_wheel and not car.awd:
+		return
 	var accel_dir = -global_basis.z
 	
 	var torque = car.accel_input * car.engine_power * grip
@@ -125,8 +123,8 @@ func suspension(delta, collision_point):
 	#if is_front_wheel:
 		#print(spring_length)
 	
-	grip = ((car.suspension_rest_dist - spring_length) + damper_force/car.spring_strength) * 5 + 2
-	#print(grip)
+	grip = ((car.suspension_rest_dist - spring_length)) * car.grip_mult + car.min_grip
+	print(grip)
 	previous_spring_length = spring_length
 	
 	var point = Vector3(raycast_dest.x, raycast_dest.y + car.wheel_radius, raycast_dest.z)
