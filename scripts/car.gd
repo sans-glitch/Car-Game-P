@@ -22,6 +22,25 @@ var steering_input
 func _process(delta: float) -> void:
 	accel_input = Input.get_axis("reverse", "accelerate")
 	
+	#smooth_steering(delta)
+	rigid_steering()
+
+func rigid_steering():
+	steering_input = Input.get_axis("turn_right", "turn_left")
+	
+	var steering_rotation = steering_input * steering_angle
+	
+	var fl_wheel = $Wheels/FLWheel
+	var fr_wheel = $Wheels/FRWheel
+	
+	if steering_rotation != 0:
+		fl_wheel.rotation.y = deg_to_rad(steering_rotation)
+		fr_wheel.rotation.y = deg_to_rad(steering_rotation)
+	else:
+		fl_wheel.rotation.y = 0
+		fr_wheel.rotation.y = 0
+
+func smooth_steering(delta):
 	steering_input = Input.get_axis("turn_right", "turn_left")
 	
 	var steering_rotation = steering_input * steering_angle
@@ -35,6 +54,7 @@ func _process(delta: float) -> void:
 		
 		fl_wheel.rotation.y = lerp(fl_wheel.rotation.y, new_rotation, 0.3)
 		fr_wheel.rotation.y = lerp(fr_wheel.rotation.y, new_rotation, 0.3)
+		
 	else:
 		fl_wheel.rotation.y = lerp(fl_wheel.rotation.y, 0.0, 0.3)
 		fr_wheel.rotation.y = lerp(fr_wheel.rotation.y, 0.0, 0.3)

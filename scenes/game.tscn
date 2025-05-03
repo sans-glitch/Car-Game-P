@@ -56,17 +56,17 @@ shape = SubResource("ConcavePolygonShape3D_u5sy4")
 [node name="Car" parent="." instance=ExtResource("1_uwrxv")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 3, 28.5564)
 mass = 1000.0
-suspension_rest_dist = 0.2
-spring_strength = 30000.0
+suspension_rest_dist = 0.1
+spring_strength = 40000.0
 spring_damper = 100.0
 wheel_radius = 0.25
 debug = true
-engine_power = 1000.0
+engine_power = 2000.0
+steering_angle = 40.0
 front_tire_grip = 0.5
 rear_tire_grip = 0.2
 min_grip = 0.0
 grip_mult = 50.0
-awd = true
 
 [node name="Camera3D" type="Camera3D" parent="Car"]
 transform = Transform3D(1, -4.37114e-08, -1.36966e-08, 4.47035e-08, 0.866025, 0.5, -9.99407e-09, -0.5, 0.866025, 0, 2.6755, 3)

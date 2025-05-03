@@ -34,21 +34,20 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("brake"):
 		var collision_point = get_collision_point()
 		apply_friction(collision_point, (car.mass / car.friction_denom))
-	
+
 func apply_x_force(delta, collision_point):
 	var dir: Vector3 = global_basis.x
 	#var tire_world_vel: Vector3 = get_point_velocity(global_position)
 	var state := PhysicsServer3D.body_get_direct_state(car.get_rid())
 	var tire_world_vel: Vector3 = state.get_velocity_at_local_position(global_position - car.global_position)
 	var lateral_vel: float = dir.dot(tire_world_vel)
-	
 	#var grip = car.rear_tire_grip
 	#if is_front_wheel:
 		#grip = car.front_tire_grip
 		#
 	#grip = susp_force.length()/car.spring_strength
 	
-	var desired_vel_change: float = -lateral_vel * grip
+	var desired_vel_change: float = -lateral_vel * ((grip))
 	var x_force = desired_vel_change / delta / 1
 	
 	car.apply_force(dir * x_force, collision_point - car.global_position)
@@ -124,7 +123,7 @@ func suspension(delta, collision_point):
 		#print(spring_length)
 	
 	grip = ((car.suspension_rest_dist - spring_length)) * car.grip_mult + car.min_grip
-	print(grip)
+	#print(grip)
 	previous_spring_length = spring_length
 	
 	var point = Vector3(raycast_dest.x, raycast_dest.y + car.wheel_radius, raycast_dest.z)
